@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "dotenv": "^18.0.5",
+    "prisma": "^7.10.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.10.0",
+    "@prisma/client": "^7.10.0"
+  }
+}

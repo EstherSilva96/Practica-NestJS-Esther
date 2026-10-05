@@ -4,7 +4,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export declare class UsersController {
     private readonly usersService;
     constructor(usersService: UsersService);
-    create(createUserDto: CreateUserDto): import("@prisma/client").Prisma.Prisma__UserClient<{
+    create(createUserDto: CreateUserDto): Promise<{
         email: string;
         name: string | null;
         password: string;
@@ -14,7 +14,7 @@ export declare class UsersController {
         updatedAt: Date;
         role: import("@prisma/client").$Enums.Role;
         id: number;
-    }, never, import("@prisma/client/runtime/client").DefaultArgs, import("@prisma/client").Prisma.PrismaClientOptions>;
+    }>;
     findAll(): import("@prisma/client").Prisma.PrismaPromise<{
         email: string;
         name: string | null;

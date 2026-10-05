@@ -4,7 +4,7 @@ import { PrismaService } from '../prisma/prisma.service';
 export declare class UsersService {
     private prisma;
     constructor(prisma: PrismaService);
-    create(createUserDto: CreateUserDto): import("@prisma/client").Prisma.Prisma__UserClient<{
+    create(createUserDto: CreateUserDto): Promise<{
         email: string;
         name: string | null;
         password: string;
@@ -14,7 +14,7 @@ export declare class UsersService {
         updatedAt: Date;
         role: import("@prisma/client").$Enums.Role;
         id: number;
-    }, never, import("@prisma/client/runtime/client").DefaultArgs, import("@prisma/client").Prisma.PrismaClientOptions>;
+    }>;
     findAll(): import("@prisma/client").Prisma.PrismaPromise<{
         email: string;
         name: string | null;

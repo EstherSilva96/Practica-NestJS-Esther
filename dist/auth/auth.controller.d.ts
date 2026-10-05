@@ -1,4 +1,7 @@
 import { LoginDto } from './dto/login.dto.js';
+import { AuthService } from './auth.service.js';
 export declare class AuthController {
-    login(loginDto: LoginDto): void;
+    private authService;
+    constructor(authService: AuthService);
+    login(data: LoginDto): Promise<string>;
 }
